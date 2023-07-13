@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:h2:file:/data/demo
+    driverClassName: org.h2.Driver
+    password: '1234'
+  h2:
+    console:
+      enabled: 'true'
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+
+#spring.datasource.url=jdbc:h2:mem:employeemanager
