@@ -39,20 +39,28 @@ public class EmployeeService {
     public Employee updateEmployee(EmployeeDto dto) {
         Employee employee = employeeRepository.findById(dto.getId()).orElse(null);
 
-        if (dto.getEmail() != null)
+        if (dto.getEmail() != null) {
             employee.setEmail(dto.getEmail());
+        }
 
-        if (dto.getName() != null)
+        if (dto.getName() != null) {
             employee.setName(dto.getName());
+        }
 
-        if (dto.getPhone() != null)
+        if (dto.getPhone() != null) {
             employee.setPhone(dto.getPhone());
+        }
 
-        if (dto.getImageUrl() != null)
+
+        if (dto.getImageUrl() != null) {
+
             employee.setImageUrl(dto.getImageUrl());
+        }
 
-        if (dto.getJobTitle() != null)
+        if (dto.getJobTitle() != null) {
+
             employee.setJobTitle(dto.getJobTitle());
+        }
 
         return employeeRepository.save(employee);
 
