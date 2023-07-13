@@ -56,7 +56,6 @@ public class EmployeeController {
         employeeService.deleteById(id);
     }
 
-
     @GetMapping("/{name}/{jobTitle}")
     public List<EmployeeDto> findByNameAndJobTitle(@PathVariable("name") String name, @PathVariable("jobTitle") String jobTitle) {
 
